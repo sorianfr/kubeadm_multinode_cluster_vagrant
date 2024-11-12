@@ -53,5 +53,5 @@ sudo apt-mark hold kubelet kubeadm kubectl
 sudo systemctl enable --now kubelet 
 
 # Mark file for completion
-echo "Setup complete" > /home/ec2-user/setup_completed.txt
+echo "Setup complete" > /home/ubuntu/setup_completed.txt
 
