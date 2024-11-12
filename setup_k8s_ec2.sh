@@ -51,3 +51,7 @@ sudo apt-mark hold kubelet kubeadm kubectl
 
 # Enable kubelet service
 sudo systemctl enable --now kubelet 
+
+# Mark file for completion
+touch /home/ubuntu/setup_completed
+
