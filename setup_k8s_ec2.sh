@@ -11,6 +11,11 @@ sudo sed -i '/ swap / s/^/#/' /etc/fstab
 sudo modprobe overlay
 sudo modprobe br_netfilter
 
+sudo tee /etc/modules-load.d/kubernetes.conf <<EOF
+overlay
+br_netfilter
+EOF
+
 # Add some settings to sysctl
 sudo tee /etc/sysctl.d/kubernetes.conf<<EOF
 net.bridge.bridge-nf-call-ip6tables = 1
