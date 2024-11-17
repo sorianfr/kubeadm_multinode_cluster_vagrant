@@ -10,10 +10,16 @@ sudo sed -i '/ swap / s/^/#/' /etc/fstab
 # Enable kernel modules
 sudo modprobe overlay
 sudo modprobe br_netfilter
+sudo modprobe ip_tables
+sudo modprobe ip6_tables
+sudo modprobe nf_conntrack
 
 sudo tee /etc/modules-load.d/kubernetes.conf <<EOF
 overlay
 br_netfilter
+ip_tables
+ip6_tables
+nf_conntrack
 EOF
 
 # Add some settings to sysctl
