@@ -80,3 +80,9 @@ sudo systemctl enable --now kubelet
 # Mark file for completion
 echo "Setup complete" > /home/ubuntu/setup_completed.txt
 
+# Install awscli & unzip
+sudo apt-get update -y
+sudo apt-get install -y unzip awscli jq curl
+
+
+
